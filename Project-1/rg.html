@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <style>
+            body {
+				
+				height:2000px;
+			font-family: Verdana, Geneva, sans-serif;
+            display: fixed;
+            background-image: url(rg-bg.avif);
+            overflow: clip;
+		}
+            #box {
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				display: none;
+				position: relative; 
+                margin-left: 500px;
+		}
+        h3{
+            color: aliceblue;
+        }
+        </style>
+    </head>
+<body>   
+<h1 align="center" style="color:lightgrey;">THE REACTION GAME</h1><br><br>
+<h3><i>Click on the boxes and circles as quickly as you can.</i> </h3>
+
+<p id="printReactionTime"></p>
+<div id="lkm"></div>
+<p id="high"></p>
+<div id="box"></div>
+<button id="start">START</button>
+<button id="stop">STOP GAME</button>
+</body> 
+<script>
+    const stop=document.getElementById('stop');
+    stop.addEventListener('click',function(){
+        window.location.href='other.html';
+    });
+    
+	
+	function getRandomColor() {
+				
+				var letters = "0123456789ABCDEF".split('');
+				var color = "#";
+				for (var i = 0; i < 6; i++) {
+					color += letters[Math.round(Math.random() * 15)];
+				} //ends for loop 
+				return color; 
+			
+			
+			} // ends getRandomColor Function
+		
+		var arr=[];
+			var clickedTime; 
+			var createdTime; 
+			var reactionTime; 
+			document.getElementById('start').addEventListener('click',function myfun(){
+			function makeBox() {
+					var time=Math.random();
+					time=time*3000;
+				
+				setTimeout(function() {
+				
+					if (Math.random()>0.5) {
+					
+						document.getElementById("box").style.borderRadius="100px";
+						
+						} else {
+						
+							document.getElementById("box").style.borderRadius="0";
+						}
+						
+					var top= Math.random();
+						top= top*300;
+					var left= Math.random();
+						left= left*500; 
+						
+					document.getElementById("box").style.top = top + "px";
+					document.getElementById("box").style.left = left + "px"; 
+				
+					document.getElementById("box").style.backgroundColor=getRandomColor();
+				
+					document.getElementById("box").style.display="block";
+					
+					createdTime=Date.now();
+					
+				}, time); 
+			
+			}
+			
+			document.getElementById("box").onclick=function() {
+			
+				clickedTime=Date.now();
+				
+				reactionTime=(clickedTime-createdTime)/1000;
+				arr.push(reactionTime);
+				arr.sort();
+				
+				document.getElementById("printReactionTime").innerHTML="Your least Reaction Time is: " + reactionTime + "seconds";
+				document.getElementById("lkm").innerHTML="Your highest score is: " +arr[0] + "seconds";
+				this.style.display="none";
+		
+				makeBox();	
+			}
+			makeBox(); }
+			
+			)
+</script>
+</html>

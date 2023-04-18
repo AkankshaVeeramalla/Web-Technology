@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bill.css">
+</head>
+<body>
+	<div class="div">
+		<h1>Admission</h1>
+		<form id="adm-bill"><table><tr><td>
+			<label for="dept">DEPARTMENT:</label>
+			<select id="dept" name="dept">
+				<option value="80000">CSE</option>
+				<option value="75000">ECE</option>
+				<option value="70000">CHEMICAL</option>
+				<option value="79000">EEE</option>
+				<option value="77000">MECHANICAL</option>
+				<option value="81000">IT</option>
+				<option value="76000">CIVIL</option>
+			</select></td></tr>
+			<tr><td>
+			<label for="fee">ADMISSION TYPE:</label>
+			<select id="fee" name="fee">
+				<option value="0">Through EAMCET</option>
+				<option value="100000">Management Quota</option>
+			</select></td></tr>
+				<tr><td>
+			<label for="caste">CASTE:</label>
+			<select id="caste" name="caste">
+				<option value="0">SC and ST</option>
+				<option value="10000">OBC</option>
+			</select></td></tr>
+				<tr><td>
+			<label for="hostel">HOSTEL:</label>
+			<select id="hostel" name="hostel">
+				<option value="80000">YES</option>
+				<option value="0">NO</option>
+			</select></td></tr>
+<tr><td>
+			<button type="submit" id="submit-btn">GENERATE BILL</button></td></tr>
+		</form>
+<tr><td>
+			
+		<div>
+			<p  id="finbill"></p>
+			<p id="at"></p>
+			<p id="bill">Your total amount to be paid in rupees is: <span id="total"></span></p>
+
+		</div>
+		</div></td></tr>
+	</div>
+	
+</table>
+
+	
+</body>
+<script>
+    const orderForm = document.getElementById('adm-bill');
+const dept = document.getElementById('dept');
+const fee = document.getElementById('fee');
+const caste = document.getElementById('caste');
+const hostel = document.getElementById('hostel');
+const submitBtn = document.getElementById('submit-btn');
+const total = document.getElementById('total');
+
+// Calculate the total price
+function calculateTotal() {
+  const deptPrice = parseFloat(dept.value);
+  const feePrice = parseFloat(fee.value);
+  const castePrice = parseFloat(caste.value);
+  const hostelPrice = parseFloat(hostel.value);
+ 
+
+  const totalPrice = deptPrice + feePrice + castePrice + hostelPrice;
+  total.innerText = `${totalPrice.toFixed(2)}`;
+
+}
+
+// Add event listener to the form
+orderForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+ calculateTotal();
+ if((document.getElementById('dept').value)=="80000")
+ {
+ document.getElementById('finbill').innerHTML='Department :CSE.......'+dept.value;
+ }
+ else if((document.getElementById('dept').value)=="75000")
+ {
+ document.getElementById('finbill').innerHTML='Department :ECE.......'+dept.value;
+ }
+ else if((document.getElementById('dept').value)=="70000")
+ {
+ document.getElementById('finbill').innerHTML='Department :CHEM.......'+dept.value;
+ }
+ else if((document.getElementById('dept').value)=="77000")
+ {
+ document.getElementById('finbill').innerHTML='Department :MECH.......'+dept.value;
+ }
+ else if((document.getElementById('dept').value)=="76000")
+ {
+ document.getElementById('finbill').innerHTML='Department :CIVIL.......'+dept.value;
+ }
+ else if((document.getElementById('dept').value)=="81000")
+ {
+ document.getElementById('finbill').innerHTML='Department :IT.......'+dept.value;
+ }
+ else if((document.getElementById('dept').value)=="79000")
+ {
+ document.getElementById('finbill').innerHTML='Department :EEE.......'+dept.value;
+ }
+
+ if((document.getElementById('fee').value)=="0")
+ {
+ document.getElementById('at').innerHTML='Through EAMCET :'+fee.value;
+ }
+ else if((document.getElementById('fee').value)=="100000")
+ {
+ document.getElementById('at').innerHTML='Management Quota :'+fee.value;
+ }
+
+ 
+});
+
+// Add event listeners to the select elements
+
+
+
+</script>
+</html>

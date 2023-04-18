@@ -1,0 +1,31 @@
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: bold;
+    text-shadow: 1px 1px;
+    
+}
+.icon{
+ 
+  background: lavender;
+  width: 100px;   
+  font-size: large;
+}
+.marq{
+    background-color: beige;
+}
+#txt{
+    text-align: right;
+    margin-left: 1270px;
+    margin-right: 10px;
+    background-color: black;
+    color: aliceblue;
+    font-size: large;
+    
+}
+body{
+    background-color: aliceblue;
+    
+}

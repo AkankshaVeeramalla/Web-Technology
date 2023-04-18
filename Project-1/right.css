@@ -1,0 +1,31 @@
+h1{
+    font-size: xx-large;
+    font-style: italic;
+    text-align: center;
+   
+}
+.watermark__body {
+    position: fixed;
+	left: 255px;
+	transform: rotate(-45deg);
+	opacity: .3;
+	font-size: 120px;
+	color: lightgray;
+	text-align: center;    
+}
+body{
+    background-color: cornsilk;
+}
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.rim{
+    margin-left:700px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+  

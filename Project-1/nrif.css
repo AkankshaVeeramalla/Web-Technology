@@ -1,0 +1,15 @@
+body{
+    background-color: blanchedalmond;
+    margin-left: 20%;
+}
+table{
+    text-align: justify-all;
+ padding: 10px;
+
+border-style: dashed;
+background-color: lavender;
+font-size: 20px;
+}
+tr:hover{
+    background-color: aqua;
+}

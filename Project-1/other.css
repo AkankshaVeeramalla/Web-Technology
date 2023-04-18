@@ -1,0 +1,17 @@
+body{
+    background-image: url('sparkle.png');
+    color: darkslategray;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+img{
+    width: 150px;
+    height: 150px;
+    margin-left: 400px;
+    border-radius: 5px;
+}
+.txt{
+    color:darkslategray;
+    font-style: italic,bold;
+    margin-left: 450px;
+}

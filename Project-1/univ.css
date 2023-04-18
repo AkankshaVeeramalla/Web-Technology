@@ -1,0 +1,12 @@
+body{
+    
+    line-height: 30pt;
+    font-size: large;
+    background-color: azure;
+}
+.div {
+    
+    border: 15px solid pink;
+    padding: 50px;
+    overflow: hidden;
+  }

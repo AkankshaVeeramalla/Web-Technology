@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="other.css">
+    </head>
+    <body>       
+        <br><br><br>
+        <h1 align="center">TRY OUT SOME OF OUR GAMES</h1>
+        <a href="rg.html"><img src="game.png" id="img"></a>
+        <div class="txt">REACTION<br>GAME</div>
+    </body>    
+    <script>
+        var img=document.getElementById('img');
+        img.addEventListener('mouseover',function(){
+            img.style.height='200px';
+            img.style.width='200px';
+        })
+        img.addEventListener('mouseout',function(){
+            img.style.height='150px';
+            img.style.width='150px';
+        })
+    </script>
+</html>

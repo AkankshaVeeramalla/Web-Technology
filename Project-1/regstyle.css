@@ -1,0 +1,26 @@
+body
+{
+text-align: justify-all;
+background-color: lavender;
+font-size: 20px;
+line-height: 26pt;
+}
+h1
+{
+color: whitesmoke;
+font-style: sans serif;
+background-color: black;
+text-align: center;
+}
+.set1
+{
+margin: 30px;
+border-style: dashed;
+background-color: lavenderblush;
+font-family: cursive;
+}
+.set2
+{
+background-color: lightcoral;
+text-align: center;
+}
